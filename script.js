@@ -26,14 +26,14 @@ function signName() {
 }
 
 var myHeaders = new Headers();
-myHeaders.append("apikey", "eqMmUNKH01K1Rt0MZPf44Xfu8fRSgiXU");
+myHeaders.append("apikey", "vkK3Aqyr0PBNhl5Q6Mm991KSsJxaxvgU");
 
 var requestOptions = {
   method: 'GET',
   redirect: 'follow',
   headers: myHeaders
 };
-function changeCurrency(){
+
 fetch("https://api.apilayer.com/currency_data/change", requestOptions)
 .then(response => response.json())
 .then(response => {
@@ -41,8 +41,3 @@ fetch("https://api.apilayer.com/currency_data/change", requestOptions)
 
 })
 .catch(error => console.log('error', error.message))
-}
-
-changeCurrency();
-
-setInterval(changeCurrency, 5000);
